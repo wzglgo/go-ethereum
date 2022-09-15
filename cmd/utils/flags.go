@@ -1859,9 +1859,12 @@ func SetEthConfig(ctx *cli.Context, stack *node.Node, cfg *ethconfig.Config) {
 			cfg.EthDiscoveryURLs = SplitAndTrim(urls)
 		}
 	}
+	log.Info("aaaaa11aa")
 	// Override any default configs for hard coded networks.
 	switch {
 	case ctx.Bool(MainnetFlag.Name):
+
+		log.Info("bbbb222bbb")
 		if !ctx.IsSet(NetworkIdFlag.Name) {
 			cfg.NetworkId = 1
 		}
